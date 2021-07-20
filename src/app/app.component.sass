@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap')
+
+*::-webkit-scrollbar
+    width: 0
+
+#app
+    position: relative
+    height: 100vh
+    width: 100vw
+    overflow: hidden
+    background-color: #f9f9f9
+    display: flex
+    font-family: 'Lato', sans-serif
+    font-style: normal
+    p
+        margin: 0
+        padding: 0
+    .side-nav
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 310px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        background-color: #FFFFFF
+        box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.1)
+        .side-nav-main
+            .side-nav-header
+                padding-left: 20px
+                height: 100px
+                display: flex
+                align-items: center
+                .side-nav-header-img
+                    width: 54px
+                    height: 54px
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: contain
+                .side-nav-header-heading
+                    margin-left: 20px
+
+                    font-weight: 600
+                    font-size: 20px
+                    line-height: 22px
+                    letter-spacing: 0.02em
+            .side-nav-item
+                padding-left: 20px
+                height: 70px
+                display: flex
+                align-items: center
+                .side-nav-item-img
+                    width: 26px
+                    height: 26px
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: contain
+                .side-nav-item-txt
+                    margin-left: 20px
+                    font-weight: 500
+                    font-size: 18px
+                    line-height: 24px
+                    letter-spacing: 0.02em
+            .side-nav-item.active
+                background-color: #F56400
+                color: #FFFFFF
+        .side-nav-footer
+            width: 270px
+            height: 84px
+            margin: 20px auto
+            background: #F5F5F5
+            border-radius: 10px
+            display: flex
+            align-items: center
+            .side-nav-footer-img
+                height: 50px
+                width: 50px
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                    border-radius: 50%
+            .side-nav-footer-txt
+                height: 50px
+                margin-left: 10px
+                p:first-child
+                    font-weight: 600
+                    font-size: 16px
+                    line-height: 24px
+                    letter-spacing: 0.02em
+                p:last-child
+                    font-size: 12px
+                    line-height: 20px
+                    letter-spacing: 0.02em
+            .side-nav-footer-logoutBtn
+                height: 20px
+                width: 20px
+                margin-left: 25px
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: contaion
+    .main
+        position: absolute
+        top: 0
+        right: 0
+        width: calc( 100vw - 310px )
+        height: 100%
+        padding: 0 20px
+        .main-header
+            display: flex
+            align-items: center
+            .main-header-txt
+                margin: 30px 0 30px 25px
+                font-weight: 600
+                font-size: 24px
+                line-height: 26px
+                letter-spacing: 0.02em
+        .main-body
+            overflow-y: auto
+            height: calc( 100% - 100px )
+            .main-photos
+                background: #FFFFFF
+                box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1)
+                border-radius: 7px
+                .main-photos-header
+                    padding: 15px 20px
+                    border-bottom: 1px solid #BCBCBC
+                    div:first-child
+                        font-weight: 600
+                        font-size: 20px
+                        line-height: 28px
+                        letter-spacing: 0.02em
+                .main-cards
+                    padding: 15px 20px
+                    display: flex
+                    flex-wrap: wrap
+                    .add-new-card,.preview-card
+                        height: 132px
+                        width: 132px
+                        margin: 10px
+                        border-radius: 7px
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        align-items: center
+                        border: 1px solid #BCBCBC
+                    .add-new-card
+                        background-color: #BCBCBC
+                        .add-new-card-img
+                            width: 40px
+                            height: 40px
+                            img
+                                width: 100%
+                                height: 100%
+                                object-fit: contain
+                        .add-new-card-txt
+                            margin-top: 14px
+                            font-weight: 500
+                            font-size: 14px
+                            letter-spacing: 0.02em
+                            color: #FFFFFF
+                    .preview-card
+                        .preview-card-img
+                            width: 82px
+                            height: 82px
+                            img
+                                width: 100%
+                                height: 100%
+                                object-fit: cover
+                        .preview-card-txt
+                            margin-top: 8px
+                            font-weight: 500
+                            font-size: 14px
+                            line-height: 22px
+                            text-align: center
+                            letter-spacing: 0.02em
+                            color: #BCBCBC
+            .main-listing-details
+                margin-top: 40px
+                background: #FFFFFF
+                box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1)
+                border-radius: 7px
+                .main-listing-details-header
+                    padding: 15px 20px
+                    border-bottom: 1px solid #BCBCBC
+                    p:first-child
+                        font-weight: 600
+                        font-size: 20px
+                        line-height: 28px
+                        letter-spacing: 0.02em
+                .main-listing-details-form
+                    padding: 15px 20px
+                    .col-form-label
+                        font-weight: 500
+                        font-size: 18px
+                        position: relative
+                    .col-form-label.required
+                        span:first-child::after
+                            content: "*"
+                            color: red
+                    .form-check-input
+                        width: 20px
+                        height: 20px
+                    .form-check-input:checked[type=radio]
+                        background-image: url('../assets/imgs/radio.svg')
+                        background-repeat: no-repeat
+                        background-size: 50%
+                        background-position: center
+                    .form-check-input:checked
+                        border: 2px solid #F56400
+                        background-color: #fff
+                    .form-check-label
+                        margin-right: 20px
+                        font-size: 16px
+                        color: #777777
+            .main-footer
+                margin-top: 40px
+                padding: 20px
+                background: #FFFFFF
+                box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1)
+                border-radius: 7px
+                display: flex
+                align-items: center
+                justify-content: space-between
+                color: #595959
+                font-size: 16px
+                letter-spacing: 0.02em
+                .btn
+                    width: 150px
+                    height: 46px
+                    border-radius: 100px
+                    font-weight: 600
+                .btn-cancel
+                    background: #BCBCBC
+                    color: #FFFFFF
+                .btn-save
+                    background: #F56400
+                    color: #FFFFFF
+    .ques-tooltip
+        width: 17px
+        height: 17px
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
